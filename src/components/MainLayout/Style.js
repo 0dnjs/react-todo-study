@@ -6,6 +6,7 @@ export const SLayout = css`
     position: absolute;
     top: 45%;
     left: 50%;
+    z-index: -1;
     display: flex;
     border-radius: 20px;
     padding: 20px;

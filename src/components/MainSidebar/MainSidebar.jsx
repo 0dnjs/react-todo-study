@@ -1,13 +1,13 @@
+import React, { useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React, { useState } from 'react';
 import * as S from "./Style";
-import Header from "./Header/Header";
-import List from "./List/List";
-import { useRecoilState } from "recoil";
+import Header from './Header/Header';
+import List from './List/List';
+import { useRecoilState } from 'recoil';
 import { isSidebarShowState } from "../../store/SidebarStore";
 
-function MainSidebar(props) {
+function MainSidebar() {
     const [ isSidebarShow, setIsSidebarShow ] = useRecoilState(isSidebarShowState);
 
     const [ mainMenuListArray, setMainMenuListArray ] = useState({
@@ -56,24 +56,26 @@ function MainSidebar(props) {
                 name: "Work",
                 count: 0
             },
-            { id: 3,
+            {
+                id: 3,
                 path: "",
                 icon: "",
                 name: "List 1",
                 count: 0
-            },
-        ],
+            }
+        ]
     });
 
     return (
         <div css={S.SLayout(isSidebarShow)}>
-            <Header />
+            <Header/>
             {isSidebarShow && (
                 <>
-                    <List title={"TASKS"} list={mainMenuListArray.tasks} />
-                    <List title={"LISTS"} list={mainMenuListArray.lists} />
+                    <List title={"TASKS"} list={mainMenuListArray.tasks}/>
+                    <List title={"LISTS"} list={mainMenuListArray.lists}/>
                 </>
             )}
+            
         </div>
     );
 }

@@ -8,7 +8,6 @@ import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // console 찍어주는건데 2번씩 찍히는 경우가 있어서 오류뜰때나 필요할때 빼고 일단 주석
   // <React.StrictMode>
   <RecoilRoot>
     <BrowserRouter>
@@ -18,4 +17,7 @@ root.render(
   // </React.StrictMode>
 );
 
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

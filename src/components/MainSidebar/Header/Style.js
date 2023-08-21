@@ -51,7 +51,7 @@ export const SSearchIcon = css`
     left: 5%;
 `;
 
-export const SSearchInput = css`
+export const SSSearchInput = css`
     border: none;
     outline: none;
     width: 100%;

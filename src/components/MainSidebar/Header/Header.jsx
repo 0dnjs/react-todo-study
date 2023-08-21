@@ -2,8 +2,8 @@ import React from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import * as S from "./Style";
-import { HiMenu, HiSearch } from "react-icons/hi" 
-import { useRecoilState } from "recoil";
+import { HiMenu, HiSearch } from "react-icons/hi";
+import { useRecoilState } from 'recoil';
 import { isSidebarShowState } from "../../../store/SidebarStore";
 
 function Header() {
@@ -20,12 +20,14 @@ function Header() {
                 <button css={S.SToggleButton} onClick={handleMenuToggleClick}><HiMenu /></button>
             </div>
             {isSidebarShow && (
-            <div css={S.SSearchBox}>
-                <HiSearch css={S.SSearchIcon}/>
-                <input css={S.SSearchInput} type="search" />
-            </div>
+                <div css={S.SSearchBox}>
+                    <HiSearch css={S.SSearchIcon}/>
+                    <input css={S.SSSearchInput} type="search" />
+                </div>
             )}
+            
         </div>
+        
     );
 }
 
